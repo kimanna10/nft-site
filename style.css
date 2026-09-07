@@ -423,8 +423,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  filter: blur(15px);
-  background: inherit;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
 }
 .category-img img {
   width: 100px;
@@ -566,7 +566,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(59, 59, 59, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   filter: blur(10px);
 }
 .auction-text,
