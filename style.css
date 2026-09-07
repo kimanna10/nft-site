@@ -109,6 +109,14 @@ body {
   color: var(--text-color);
 }
 
+.btn-auction {
+  color: var(--background-color);
+  background-color: var(--text-color);
+}
+.btn-auction svg {
+  color: var(--call-color);
+}
+
 .nav-btn {
   padding: 20px 30px;
 }
@@ -131,12 +139,14 @@ body {
 .hero-section,
 .collection-section,
 .creators-section,
-.category-section {
+.category-section,
+.catalog-section {
   padding: 80px 0;
 }
 .collection-wrap,
 .creators-wrap,
-.category-wrap {
+.category-wrap,
+.catalog-wrap {
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -242,24 +252,30 @@ body {
   padding: 22px 20px;
 }
 .hero-card-author,
-.collection-author {
+.collection-author,
+.nft-author {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 .hero-card-author img,
-.collection-author img {
+.collection-author img,
+.nft-author img,
+.auction-author img {
   border-radius: 100%;
   width: 24px;
   height: 24px;
 }
 .hero-card-author p,
-.collection-author-name {
+.collection-author-name,
+.nft-author-name,
+.auction-author-name {
   font-size: var(--font-size-base);
   line-height: var(--line-height-140);
 }
 .hero-card-title,
-.collection-title {
+.collection-title,
+.nft-title {
   font-size: var(--font-size-h5);
   font-weight: 600;
   text-transform: capitalize;
@@ -399,16 +415,16 @@ body {
 .category-img {
   padding: 70px;
   position: relative;
-}
-.category-back:nth-of-type(1) {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
   background: url("assets/category/category-art.svg");
   background-size: cover;
+}
+
+.category-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   filter: blur(15px);
+  background: inherit;
 }
 .category-img img {
   width: 100px;
@@ -422,4 +438,159 @@ body {
   font-size: var(--font-size-h5);
   font-weight: 600;
   line-height: var(--line-height-140);
+}
+
+/* -------- CATALOG SECTION ---------*/
+.catalog-section .section-content {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.catalog-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.nft-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.nft-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 30px 25px;
+}
+
+.nft-top-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nft-bottom-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.nft-feature:nth-of-type(2n) {
+  justify-self: end;
+  text-align: end;
+}
+
+.nft-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-space-mono);
+}
+
+.nft-feature-name {
+  color: var(--caption-color);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-110);
+}
+.nft-feature-value {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-140);
+}
+
+/* -------- AUCTION SECTION ---------*/
+
+.auction-section {
+  padding: 360px 0 60px;
+  background: url("assets/collection/collection-1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.auction-section::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top 0 left 0 right 0 bottom 0 */
+  background: linear-gradient(
+    180deg,
+    rgba(162, 89, 255, 0) 0%,
+    rgba(162, 89, 255, 1) 100%
+  );
+}
+
+.auction-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+}
+.auction-head {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: start;
+  width: 100%;
+}
+
+.auction-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  color: var(--text-color);
+}
+
+.auction-title {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  line-height: var(--line-height-110);
+  text-transform: capitalize;
+}
+
+.auction-timer {
+  background: rgba(59, 59, 59, 0.5);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-space-mono);
+}
+
+.auction-timer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 59, 59, 0.1);
+  filter: blur(10px);
+}
+.auction-text,
+.auction-time {
+  position: relative;
+}
+
+.auction-text,
+.auction-time-item {
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-110);
+}
+.auction-time {
+  display: flex;
+  gap: 10px;
+}
+.auction-time-value {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: var(--line-height-120);
+  margin-bottom: 5px;
+}
+.auction-colon {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-140);
+  font-weight: 700;
 }
