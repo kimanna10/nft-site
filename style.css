@@ -455,6 +455,7 @@ body {
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
 .nft-img img {
@@ -860,4 +861,108 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   row-gap: 60px;
   column-gap: 30px;
+}
+
+/* -------- ARTISTS PAGE  ---------*/
+
+/* -------- TAB SECTION  ---------*/
+.tabs__radio {
+  display: none;
+}
+.tabs__nav-wrap {
+  border-top: 0.1px solid var(--caption-color);
+}
+.tabs__content-wrap {
+  background-color: var(--secondary-color);
+}
+.tabs .catalog-card {
+  background-color: var(--background-color);
+}
+
+.tabs__nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  padding-top: 10px;
+}
+.tabs__btn {
+  font-size: var(--font-size-h5);
+  font-weight: 600;
+  line-height: var(--line-height-140);
+  text-transform: capitalize;
+  color: var(--caption-color);
+  padding: 14px 0;
+  cursor: pointer;
+
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+#tab-1:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-1"],
+#tab-2:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-2"],
+#tab-3:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-3"] {
+  color: var(--text-color);
+}
+
+.tabs__quantity {
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  font-family: var(--font-space-mono);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-140);
+  color: var(--text-color);
+  padding: 5px 10px;
+  font-weight: 400;
+}
+
+#tab-1:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-1"] .tabs__quantity,
+#tab-2:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-2"] .tabs__quantity,
+#tab-3:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-3"] .tabs__quantity {
+  background-color: var(--caption-color);
+}
+
+.tabs__indicator {
+  background-color: var(--caption-color);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 33.3%;
+  transition: transform 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+}
+
+#tab-2:checked ~ .tabs__nav-wrap .tabs__nav .tabs__indicator {
+  transform: translateX(100%);
+}
+
+#tab-3:checked ~ .tabs__nav-wrap .tabs__nav .tabs__indicator {
+  transform: translateX(200%);
+}
+
+.tabs__wrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 80px 0;
+}
+
+.tabs__content {
+  display: flex;
+  width: 300%;
+  transition: transform 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+}
+.tabs__pane {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 33.33333%;
+}
+
+#tab-2:checked ~ .tabs__content-wrap .tabs__wrap .tabs__content {
+  transform: translateX(-33.33333%);
+}
+
+#tab-3:checked ~ .tabs__content-wrap .tabs__wrap .tabs__content {
+  transform: translateX(-66.66666%);
 }
