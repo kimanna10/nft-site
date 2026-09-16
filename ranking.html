@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artist page</title>
+    <title>Ranking page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,25 +51,21 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="creators">
       <div class="tabs">
         <!-- Скрытые радио кнопки-->
         <input type="radio" class="tabs__radio" name="tab" id="tab-1" checked />
         <input type="radio" class="tabs__radio" name="tab" id="tab-2" />
         <input type="radio" class="tabs__radio" name="tab" id="tab-3" />
+        <input type="radio" class="tabs__radio" name="tab" id="tab-4" />
 
         <!-- Шапка с кнопками-->
         <div class="tabs__nav-wrap">
           <div class="container tabs__nav">
-            <label for="tab-1" class="tabs__btn"
-              >Created <span class="tabs__quantity">302</span></label
-            >
-            <label for="tab-2" class="tabs__btn"
-              >Owned<span class="tabs__quantity">14</span></label
-            >
-            <label for="tab-3" class="tabs__btn"
-              >Collection <span class="tabs__quantity">5</span></label
-            >
+            <label for="tab-1" class="tabs__btn">Today</label>
+            <label for="tab-2" class="tabs__btn">This week</label>
+            <label for="tab-3" class="tabs__btn">This month</label>
+            <label for="tab-4" class="tabs__btn">All time</label>
             <div class="tabs__indicator"></div>
           </div>
         </div>
@@ -77,235 +73,203 @@
         <!-- Контент табов-->
         <div class="tabs__content-wrap">
           <div class="container tabs__wrap">
+            <div class="ranking-header">
+              <div class="ranking-header__artist">
+                <p class="ranking-header__num">#</p>
+                <p class="ranking-header__name">Artist</p>
+              </div>
+              <div class="ranking-header__info">
+                <div class="ranking-header__feature">Change</div>
+                <div class="ranking-header__feature">NFTs Sold</div>
+                <div class="ranking-header__feature">Volume</div>
+              </div>
+            </div>
             <div class="tabs__content">
               <div class="tabs__pane">
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
                   </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
-                  </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
                   </div>
                 </div>
               </div>
               <div class="tabs__pane">
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
                   </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
                   </div>
                 </div>
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
                   </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
-                  </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
                   </div>
                 </div>
               </div>
               <div class="tabs__pane">
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
                   </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
                   </div>
                 </div>
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
                   </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
                   </div>
                 </div>
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
                   </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
-                    </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
-                    </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
                   </div>
                 </div>
-                <div class="catalog-card">
-                  <div class="nft-img">
-                    <img src="assets/hero-img.svg" alt="nft-1" />
+              </div>
+              <div class="tabs__pane">
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
                   </div>
-                  <div class="nft-info">
-                    <div class="nft-top-info">
-                      <h3 class="nft-title">Distant galaxy</h3>
-                      <div class="nft-author">
-                        <img src="assets/avatar/avatar-2.svg" alt="mr fox" />
-                        <p class="nft-author-name">MoonDancer</p>
-                      </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
+                  </div>
+                </div>
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
                     </div>
-
-                    <div class="nft-bottom-info">
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Price</p>
-                        <p class="nft-feature-value">1.63 ETH</p>
-                      </div>
-                      <div class="nft-feature">
-                        <p class="nft-feature-name">Highest Bid</p>
-                        <p class="nft-feature-value">0.33 wETH</p>
-                      </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
+                  </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
+                  </div>
+                </div>
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
                     </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
+                  </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
+                  </div>
+                </div>
+                <div class="ranking-card">
+                  <div class="ranking-card__artist">
+                    <div class="creator-rating">
+                      <p>1</p>
+                    </div>
+                    <img
+                      src="assets/avatar/avatar-1.svg"
+                      alt="mr fox"
+                      class="ranking-card__avatar"
+                    />
+                    <h5 class="ranking-card__name">Jaydon Ekstrom Bothman</h5>
+                  </div>
+                  <div class="ranking-card__info">
+                    <div class="ranking-card__change">+1.41%</div>
+                    <div class="ranking-card__sold">602</div>
+                    <div class="ranking-card__volume">12.4 ETH</div>
                   </div>
                 </div>
               </div>

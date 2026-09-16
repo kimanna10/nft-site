@@ -12,6 +12,7 @@
   --text-secondary-color: #cccccc;
 
   --call-color: #a259ff;
+  --green-color: #00ac4f;
   --gradient-1: linear-gradient(68deg, #a259ff 0%, #ff6250 100%);
   --gradient-2: linear-gradient(36deg, #a259ff 0%, #377df7 100%);
 
@@ -387,6 +388,11 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-140);
 }
+.creator-card__rating {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+}
 .creator-rating {
   background-color: var(--background-color);
   width: 30px;
@@ -395,10 +401,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-
-  position: absolute;
-  left: 20px;
-  top: 18px;
 }
 .creator-rating p {
   font-family: var(--font-space-mono);
@@ -455,7 +457,6 @@ body {
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
-  height: fit-content;
 }
 
 .nft-img img {
@@ -902,7 +903,8 @@ footer {
 
 #tab-1:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-1"],
 #tab-2:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-2"],
-#tab-3:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-3"] {
+#tab-3:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-3"],
+#tab-4:checked ~ .tabs__nav-wrap .tabs__nav label[for="tab-4"] {
   color: var(--text-color);
 }
 
@@ -926,7 +928,6 @@ footer {
 .tabs__indicator {
   background-color: var(--caption-color);
   height: 2px;
-  width: 100%;
   position: absolute;
   bottom: 0;
   width: 33.3%;
@@ -936,9 +937,11 @@ footer {
 #tab-2:checked ~ .tabs__nav-wrap .tabs__nav .tabs__indicator {
   transform: translateX(100%);
 }
-
 #tab-3:checked ~ .tabs__nav-wrap .tabs__nav .tabs__indicator {
   transform: translateX(200%);
+}
+#tab-4:checked ~ .tabs__nav-wrap .tabs__nav .tabs__indicator {
+  transform: translateX(300%);
 }
 
 .tabs__wrap {
@@ -951,6 +954,7 @@ footer {
   display: flex;
   width: 300%;
   transition: transform 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+  align-items: start;
 }
 .tabs__pane {
   display: grid;
@@ -965,4 +969,110 @@ footer {
 
 #tab-3:checked ~ .tabs__content-wrap .tabs__wrap .tabs__content {
   transform: translateX(-66.66666%);
+}
+
+/* -------- Ranking PAGE  ---------*/
+.ranking-card {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.ranking-card__artist,
+.ranking-card__info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.ranking-card__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.ranking-card__name {
+  font-size: var(--font-size-h5);
+  font-weight: 600;
+  line-height: var(--line-height-140);
+  text-transform: capitalize;
+}
+.ranking-card__info {
+  font-family: var(--font-space-mono);
+  line-height: var(--line-height-140);
+  font-size: var(--font-size-base);
+}
+.ranking-card__change,
+.ranking-card__sold,
+.ranking-card__volume {
+  width: 160px;
+}
+.ranking-card__change {
+  color: var(--green-color);
+}
+
+.creators .tabs__nav {
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0;
+}
+
+.creators .tabs__nav-wrap {
+  border-top: none;
+}
+
+.creators .tabs__indicator {
+  width: 25%;
+}
+
+.creators .tabs__content {
+  width: 400%;
+  align-items: start;
+}
+.creators .tabs__pane {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 25%;
+}
+
+.creators #tab-2:checked ~ .tabs__content-wrap .tabs__wrap .tabs__content {
+  transform: translateX(-25%);
+}
+.creators #tab-3:checked ~ .tabs__content-wrap .tabs__wrap .tabs__content {
+  transform: translateX(-50%);
+}
+.creators #tab-4:checked ~ .tabs__content-wrap .tabs__wrap .tabs__content {
+  transform: translateX(-75%);
+}
+.creators .tabs__content-wrap {
+  background-color: var(--background-color);
+}
+.creators .tabs__wrap {
+  padding: 40px 0;
+}
+.ranking-header {
+  border-radius: 20px;
+  border: 1px solid var(--secondary-color);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ranking-header__artist,
+.ranking-header__info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: var(--caption-color);
+  font-family: var(--font-space-mono);
+  line-height: var(--line-height-140);
+  font-size: var(--font-size-base);
+}
+.ranking-header__num {
+  width: 30px;
+}
+.ranking-header__feature {
+  width: 160px;
 }
